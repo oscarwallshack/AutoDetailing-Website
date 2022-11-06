@@ -1,0 +1,80 @@
+
+*, *::before, *::after {
+    box-sizing: border-box;
+  }
+
+body {
+    font-family: "roboto", sans-serif;
+    background-color: #1d1d1d;
+  }
+  
+#mainNav{
+  position: relative;
+}
+
+nav{
+  background-color: #1d1d1d;
+}
+
+nav .dropdown-menu{
+  background-color: #1d1d1d;
+}
+
+nav .dropdown-item{
+  color: rgba(255, 255, 255, 0.55);
+}
+
+.masthead{
+    background-size: auto; 
+    min-height: 70vh;
+    position: relative;
+    color: white;
+    background: center no-repeat; 
+}
+
+@media(max-width: 758px){
+    .masthead{
+        min-height: 30vh;
+    }
+
+    h1 h2{
+        font-size: calc(1.525);
+    }
+
+}
+
+.overlay-color {
+    height: 100%;
+    width: 100%;
+  }
+
+
+  
+  a{
+    color: white;
+    text-decoration: none;
+  }
+  a:hover{
+    color: #007b95;
+  }
+
+  /* color rgba(60,126,210,255) */
+  
+  .sectionD{
+    height: 70vh;
+    background: linear-gradient(to left,#ff2952,#ce1e3f);
+  }
+  
+  .separator{
+    height: 250px;
+    margin-top: calc(250px * -1);
+    background-image: linear-gradient(to bottom right, transparent, transparent 50%, white 50%, white);
+    /* Using transparent for top of the gradient allows for a background image on the header. Alternatively you can just use a solid color that matches the header color. */
+  }
+  
+  .sectionA{
+    height: 50vh;
+    background-color: white;
+  }
+  
+   
