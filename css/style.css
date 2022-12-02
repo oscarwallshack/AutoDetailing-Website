@@ -53,7 +53,7 @@ a:hover {
     position: relative;
     display: flex;
     height: 700px;
-    background: url('../images/header.jpg') no-repeat center center / cover;
+    background: url('../images/header.webp') no-repeat center center / cover;
 
 }
 
@@ -181,15 +181,15 @@ a:hover {
 
 
 .offer .offer-1 {
-    background: url('/images/czyszczenie-wnetrz.jpg') no-repeat center center / cover;
+    background: url('/images/czyszczenie-wnetrz.webp') no-repeat center center / cover;
 }
 
 .offer .offer-2 {
-    background: url('/images/mycie-zewnetrzne.jpg') no-repeat center center / cover;
+    background: url('/images/mycie-zewnetrzne.webp') no-repeat center center / cover;
 }
 
 .offer .offer-3 {
-    background: url('/images/pielegnacja.jpg') no-repeat center center / cover;
+    background: url('/images/pielegnacja.webp') no-repeat center center / cover;
 }
 
 .cta {
@@ -198,7 +198,7 @@ a:hover {
     margin: 60px;
     padding: 40px;
     justify-items: center;
-    background: url("/images/process.jpg") no-repeat center center / cover;
+    background: url("/images/process.webp") no-repeat center center / cover;
 }
 
 .cta .sub-text {
