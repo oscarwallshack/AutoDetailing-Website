@@ -6,21 +6,23 @@ const zoomImage = document.querySelector('.zoom-image');
 
 
 const image = {
-    showModal(){
+    showModal() {
         zoomImageModal.style.display = "block";
     },
 
-    hideModal(){
+    hideModal() {
         zoomImageModal.style.display = "none";
 
     },
 
-    zoom(el){
+    zoom(el) {
         let image = el.target.src;
-        zoomImage.src = image;
-        this.showModal();
+        if (image) {
+            zoomImage.src = image;
+            this.showModal();
+        }
     }
 }
 
-images.addEventListener('click', (e) => {image.zoom(e)})
-closeBtn.addEventListener('click', function()  { image.hideModal()});
+images.addEventListener('click', (e) => { image.zoom(e) })
+closeBtn.addEventListener('click', function () { image.hideModal() });
