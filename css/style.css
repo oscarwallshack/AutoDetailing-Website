@@ -223,6 +223,7 @@ a:hover {
 /* Gallery */
 
 .gallery {
+    position: relative;
     display: grid;
     justify-items: center;
     justify-content: center;
@@ -233,7 +234,6 @@ a:hover {
 }
 
 .gallery .images {
-    position: relative;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -274,26 +274,25 @@ a:hover {
     color: #fff;
 }
 
-.gallery .zoom-images{
-    position: absolute;
-    top: auto;
+.gallery .zoom-images {
+    position: fixed;
+    top: 3em;
     left: auto;
-
 }
 
-.gallery .zoom-images div{
+.gallery .zoom-images div {
     position: relative;
 }
 
-.gallery .zoom-images .close{
+.gallery .zoom-images .close {
     position: absolute;
     width: 40px;
     height: 40px;
     cursor: pointer;
 }
 
-.gallery .zoom-images img{
-    width: 1200px;
+.gallery .zoom-images img {
+    width: 1000px;
     height: auto;
 }
 
