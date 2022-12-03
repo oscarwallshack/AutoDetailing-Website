@@ -1,5 +1,26 @@
 const closeBtn = document.querySelector('.close');
 const images = document.querySelector('.images');
-const zoomImage = document.querySelector('.zoom-images');
 
-closeBtn.addEventListener('click', function()  { zoomImage.style.display = 'none'; })
+const zoomImageModal = document.querySelector('.zoom-images');
+const zoomImage = document.querySelector('.zoom-image');
+
+
+const image = {
+    showModal(){
+        zoomImageModal.style.display = "block";
+    },
+
+    hideModal(){
+        zoomImageModal.style.display = "none";
+
+    },
+
+    zoom(el){
+        let image = el.target.src;
+        zoomImage.src = image;
+        this.showModal();
+    }
+}
+
+images.addEventListener('click', (e) => {image.zoom(e)})
+closeBtn.addEventListener('click', function()  { image.hideModal()});
