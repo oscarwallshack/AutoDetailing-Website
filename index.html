@@ -7,7 +7,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="bootstrap/css/bootstrap.css">
     <link rel="stylesheet" href="css/style.css">
-    <meta meta name="robots" content="max-image-preview:large">
+    <!-- <meta meta name="robots" content="max-image-preview:large"> -->
+    <meta meta name="robots" content="noindex nofollow">
+    
 
     <script src="./js/main.js" defer></script>
 
@@ -29,16 +31,16 @@
                 </button>
                 <div id="navbarResponsive" class="collapse navbar-collapse">
                     <div class="navbar-nav ms-auto">
-                        <a href="#cennik" class="nav-item nav-link mx-4">Cennik</a>
-
                         <div class="nav-item dropdown mx-4">
-                            <a href="#uslugi" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Usługi</a>
+                            <a href="#oferta" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Usługi</a>
                             <div class="dropdown-menu">
                                 <a href="#czyszczenie-wnetrz" class="nav-link dropdown-item">Czyszczenie wnętrz</a>
                                 <a href="#mycie-zewnetrzne" class="nav-link dropdown-item">Mycie zewnętrzne</a>
+                                <a href="#pielegnacja" class="nav-link dropdown-item">Pielęgnacja</a>
                             </div>
                         </div>
-                        <a href="#" class="nav-item nav-link mx-4">Kontakt</a>
+                        <a href="#galeria" class="nav-item nav-link mx-4">Galeria</a>
+                        <a href="#kontakt" class="nav-item nav-link mx-4">Kontakt</a>
                     </div>
                 </div>
             </div>
@@ -65,7 +67,7 @@
         <h2>Walczak AutoDetailing</h2>
 
         <div class="offers">
-            <div class="offer-1">
+            <div class="offer-1" id="czyszczenie-wnetrz">
                 <div class="offer-grad"></div>
                 <div class="offer-text">
                     <h3>Czyszczenie wnętrz</h3>
@@ -74,7 +76,7 @@
                         voluptatibus pariatur sit! Provident porro magni alias?</p>
                 </div>
             </div>
-            <div class="offer-2">
+            <div class="offer-2" id="mycie-zewnetrzne">
                 <div class="offer-grad"></div>
                 <div class="offer-text">
                     <h3>Mycie zewnętrzne</h3>
@@ -84,7 +86,7 @@
                 </div>
             </div>
 
-            <div class="offer-3">
+            <div class="offer-3" id="pielegnacja">
                 <div class="offer-grad"></div>
                 <div class="offer-text">
                     <h3>Pielęgnacja</h3>
@@ -101,7 +103,7 @@
         </div>
     </section>
 
-    <section class="gallery">
+    <section class="gallery" id="galeria">
         <h2>Realizacje</h2>
         <div class="images">
             <div class="image"><img src="/images/gallery/auto-detailing-1.webp" alt=""></div>
@@ -126,7 +128,7 @@
     </section>
 
     <footer class="footer">
-        <div class="contact-details">
+        <div class="contact-details" id="kontakt">
             <div>
                 <p><i class="fa fa-map-marker-alt me-3"></i>
                     Wierzchowicka 17A, 21-007 Krępiec</p>
