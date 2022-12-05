@@ -283,6 +283,18 @@ a:hover {
     display: none;
     background-color: #0a0a0c7c;
     backdrop-filter: blur(8px);
+    animation: zoom-open 0.5s;
+}
+
+@keyframes zoom-open {
+    from{
+        opacity: 0;
+    }
+
+    to{
+        opacity: 1;
+    }
+    
 }
 
 .gallery .zoom-images div {
