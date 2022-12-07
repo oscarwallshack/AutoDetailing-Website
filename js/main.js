@@ -1,10 +1,16 @@
 const closeBtn = document.querySelector('.close');
 const images = document.querySelector('.images');
 
-
 const zoomImageModal = document.querySelector('.zoom-images');
 const zoomImage = document.querySelector('.zoom-image');
 
+const imageArray = [...images.getElementsByTagName('img')];
+
+
+imageArray.forEach(image => {
+    console.log(image.src)
+});
+// currentSrc
 
 const image = {
     showModal() {
