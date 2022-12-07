@@ -1,6 +1,7 @@
 const closeBtn = document.querySelector('.close');
 const images = document.querySelector('.images');
 
+
 const zoomImageModal = document.querySelector('.zoom-images');
 const zoomImage = document.querySelector('.zoom-image');
 
@@ -26,3 +27,4 @@ const image = {
 
 images.addEventListener('click', (e) => { image.zoom(e) })
 closeBtn.addEventListener('click', function () { image.hideModal() });
+document.addEventListener('keydown', function (e) { e.code == "Escape" ? image.hideModal() : null; });
