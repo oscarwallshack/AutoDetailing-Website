@@ -4,12 +4,14 @@ const images = document.querySelector('.images');
 const zoomImageModal = document.querySelector('.zoom-images');
 const zoomImage = document.querySelector('.zoom-image');
 
+const leftArrow = document.querySelector("#left-arrow");
+const rightArrow = document.querySelector("#right-arrow");
 const imageArray = [...images.getElementsByTagName('img')];
 
 
-imageArray.forEach(image => {
-    console.log(image.src)
-});
+// imageArray.forEach(image => {
+//     console.log(image.src)
+// });
 // currentSrc
 
 const image = {
@@ -23,11 +25,16 @@ const image = {
     },
 
     zoom(el) {
-        let image = el.target.src;
-        if (image) {
-            zoomImage.src = image;
+        const imageSrc = el.target.src;
+        if (imageSrc) {
+            const foundImage = imageArray.find(image => image.src == imageSrc).src;
+            zoomImage.src = foundImage;
             this.showModal();
         }
+    },
+
+    next(){
+
     }
 }
 
