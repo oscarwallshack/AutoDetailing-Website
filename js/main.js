@@ -24,20 +24,33 @@ const image = {
 
     },
 
-    zoom(el) {
-        const imageSrc = el.target.src;
+    zoom(el, value = 0) {
+        console.log('el: ' + el);
+        let imageSrc = image.find(el, value);
         if (imageSrc) {
-            const foundImage = imageArray.find(image => image.src == imageSrc).src;
-            zoomImage.src = foundImage;
+            zoomImage.src = imageSrc;
             this.showModal();
         }
     },
 
-    next(){
+    find(imageSrc, value) {
 
-    }
+        console.log('imagescr: '+ imageSrc + ' value: ' + value);
+        let found = imageArray.indexOf(imageSrc);
+        console.log(found);
+        found = imageArray[found + 1].src;
+
+        // const found = imageArray.find((image) => {
+        //     let image = image.src == imageSrc;
+        // });
+        console.log('found: ' + found)
+        return found;
+    },
+
 }
 
-images.addEventListener('click', (e) => { image.zoom(e) })
+images.addEventListener('click', (e) => { image.zoom(e.target) })
 closeBtn.addEventListener('click', function () { image.hideModal() });
 document.addEventListener('keydown', function (e) { e.code == "Escape" ? image.hideModal() : null; });
+// leftArrow.addEventListener('click', ()=> image.change(-1));
+rightArrow.addEventListener('click', () => image.zoom(zoomImage, 1));
