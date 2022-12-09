@@ -13,6 +13,8 @@ const imageArray = [...images.getElementsByTagName('img')];
 //     console.log(image.src)
 // });
 // currentSrc
+let currentZoomImage;
+
 
 const image = {
     showModal() {
@@ -24,8 +26,8 @@ const image = {
 
     },
 
-    zoom(el, value = 0) {
-        console.log('el: ' + el);
+    zoom(el, value) {
+        console.log("el" + el);
         let imageSrc = image.find(el, value);
         if (imageSrc) {
             zoomImage.src = imageSrc;
@@ -33,24 +35,29 @@ const image = {
         }
     },
 
-    find(imageSrc, value) {
+    find(image, value) {
+        let found = imageArray.indexOf(image);
+console.log(imageArray.length);
 
-        console.log('imagescr: '+ imageSrc + ' value: ' + value);
-        let found = imageArray.indexOf(imageSrc);
-        console.log(found);
-        found = imageArray[found + 1].src;
+        if (found + value > imageArray.length -1 ) {
+            found = 0;
+        } else if (found + value == -1) {
+            found = imageArray.length;
+        } 
 
+        console.log(currentZoomImage);
+        currentZoomImage = imageArray[found + value];
+        found = imageArray[found + value].src;
         // const found = imageArray.find((image) => {
         //     let image = image.src == imageSrc;
         // });
-        console.log('found: ' + found)
         return found;
     },
 
 }
 
-images.addEventListener('click', (e) => { image.zoom(e.target) })
+images.addEventListener('click', (e) => { image.zoom(e.target, 0) })
 closeBtn.addEventListener('click', function () { image.hideModal() });
 document.addEventListener('keydown', function (e) { e.code == "Escape" ? image.hideModal() : null; });
 // leftArrow.addEventListener('click', ()=> image.change(-1));
-rightArrow.addEventListener('click', () => image.zoom(zoomImage, 1));
+rightArrow.addEventListener('click', () => { image.zoom(currentZoomImage, 1) });
