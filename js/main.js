@@ -35,23 +35,17 @@ const image = {
         }
     },
 
-    find(image, value) {
-        let found = imageArray.indexOf(image);
-console.log(imageArray.length);
+    find(el, value) {
+        let index = imageArray.indexOf(el);
 
-        if (found + value > imageArray.length -1 ) {
-            found = 0;
-        } else if (found + value == -1) {
-            found = imageArray.length;
-        } 
-
-        console.log(currentZoomImage);
-        currentZoomImage = imageArray[found + value];
-        found = imageArray[found + value].src;
-        // const found = imageArray.find((image) => {
-        //     let image = image.src == imageSrc;
-        // });
-        return found;
+        if (index + value > imageArray.length - 1) {
+            index = -1;
+        } else if (index + value == -1) {
+            index = imageArray.length;
+        }
+        
+        currentZoomImage = imageArray[index + value];
+        return imageArray[index + value].src;
     },
 
 }
@@ -61,3 +55,4 @@ closeBtn.addEventListener('click', function () { image.hideModal() });
 document.addEventListener('keydown', function (e) { e.code == "Escape" ? image.hideModal() : null; });
 // leftArrow.addEventListener('click', ()=> image.change(-1));
 rightArrow.addEventListener('click', () => { image.zoom(currentZoomImage, 1) });
+leftArrow.addEventListener('click', () => { image.zoom(currentZoomImage, -1) });
