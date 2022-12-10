@@ -57,6 +57,10 @@ a:hover {
 
 }
 
+.header .navbar-brand:hover{
+    color: rgb(211, 84, 88);
+}
+
 .header .navbar .nav-link {
     color: #fff;
 }
